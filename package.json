@@ -39,5 +39,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "2.7.1",
+    "sass": "^1.55.0",
+    "typescript-plugin-css-modules": "^3.4.0"
   }
 }

@@ -4,6 +4,7 @@ import SearchEngine from './SearchEngine';
 import { useState } from 'react';
 import Filters from './Filters';
 import Order from './Order';
+import Items from './Items';
 
 export default function Menu() {
   const [search, setSearch] = useState('');
@@ -25,6 +26,7 @@ export default function Menu() {
           <Filters filter={filter} setFilter={setFilter} />
           <Order order={order} setOrder={setOrder} />
         </div>
+        <Items />
       </section>
     </main>
   );

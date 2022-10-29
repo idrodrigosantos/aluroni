@@ -1,31 +1,31 @@
-import styles from './Order.module.scss';
-import options from './options.json';
 import { Dispatch, SetStateAction, useState } from 'react';
 import classNames from 'classnames';
 import { MdKeyboardArrowUp, MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import options from './options.json';
+import styles from './Sort.module.scss';
 
 export type SortOptions = '' | 'portion' | 'amount_people' | 'price';
 
 interface Props {
-  order: string;
-  setOrder: Dispatch<SetStateAction<SortOptions>>;
+  sort: string;
+  setSort: Dispatch<SetStateAction<SortOptions>>;
 }
 
-export default function Order({ order, setOrder }: Props) {
+export default function Sort({ sort, setSort }: Props) {
   const [open, setOpen] = useState(false);
-  const orderName =
-    order && options.find((option) => option.value === order)?.name;
+  const sortName =
+    sort && options.find((option) => option.value === sort)?.name;
 
   return (
     <button
       className={classNames({
-        [styles.order]: true,
-        [styles['order--active']]: order !== '',
+        [styles.sort]: true,
+        [styles['sort--active']]: sort !== '',
       })}
       onClick={() => setOpen(!open)}
       onBlur={() => setOpen(false)}
     >
-      <span>{orderName || 'Ordenar'}</span>
+      <span>{sortName || 'Ordenar'}</span>
       {open ? (
         <MdKeyboardArrowUp size={20} />
       ) : (
@@ -33,15 +33,15 @@ export default function Order({ order, setOrder }: Props) {
       )}
       <div
         className={classNames({
-          [styles.order__options]: true,
-          [styles['order__options--active']]: open,
+          [styles.sort__options]: true,
+          [styles['sort__options--active']]: open,
         })}
       >
         {options.map((option) => (
           <div
-            className={styles.order__option}
+            className={styles.sort__option}
             key={option.value}
-            onClick={() => setOrder(option.value as SortOptions)}
+            onClick={() => setSort(option.value as SortOptions)}
           >
             {option.name}
           </div>

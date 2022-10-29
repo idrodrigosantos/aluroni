@@ -1,13 +1,13 @@
-import React from 'react';
+import { Dispatch, SetStateAction } from 'react';
+import classNames from 'classnames';
 import filters from './filters.json';
 import styles from './Filters.module.scss';
-import classNames from 'classnames';
 
 type OptionType = typeof filters[0];
 
 interface Props {
   filter: number | null;
-  setFilter: React.Dispatch<React.SetStateAction<number | null>>;
+  setFilter: Dispatch<SetStateAction<number | null>>;
 }
 
 export default function Filters({ filter, setFilter }: Props) {

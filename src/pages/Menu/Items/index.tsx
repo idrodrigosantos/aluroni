@@ -1,7 +1,7 @@
+import { useEffect, useState } from 'react';
 import menu from './items.json';
 import Item from './Item';
 import styles from './Items.module.scss';
-import { useEffect, useState } from 'react';
 
 interface Props {
   search: string;
@@ -35,7 +35,7 @@ export default function Items(props: Props) {
     return list.sort((a, b) => (a[property] > b[property] ? 1 : -1));
   };
 
-  function order(newList: typeof menu) {
+  function sortList(newList: typeof menu) {
     switch (sort) {
       case 'portion':
         return sortCrescentProperty(newList, 'size');
@@ -53,7 +53,7 @@ export default function Items(props: Props) {
       (item) => testSearch(item.title) && testFilter(item.category.id)
     );
 
-    setList(order(newList));
+    setList(sortList(newList));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search, filter, sort]);
 

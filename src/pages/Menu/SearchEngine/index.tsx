@@ -1,10 +1,10 @@
-import React from 'react';
-import styles from './SearchEngine.module.scss';
+import { Dispatch, SetStateAction } from 'react';
 import { CgSearch } from 'react-icons/cg';
+import styles from './SearchEngine.module.scss';
 
 interface Props {
   search: string;
-  setSearch: React.Dispatch<React.SetStateAction<string>>;
+  setSearch: Dispatch<SetStateAction<string>>;
 }
 
 export default function SearchEngine({ search, setSearch }: Props) {

@@ -7,6 +7,13 @@ type Props = typeof menu[0];
 export default function Item(props: Props) {
   const { title, description, category, size, serving, price, image } = props;
 
+  const foodCategories = {
+    pastas: 'Massas',
+    meat: 'Carnes',
+    combos: 'Combos',
+    vegans: 'Veganos',
+  };
+
   return (
     <div className={styles.item}>
       <div className={styles.item__image}>
@@ -24,7 +31,7 @@ export default function Item(props: Props) {
               [styles[`item__type__${category.label.toLowerCase()}`]]: true,
             })}
           >
-            {category.label}
+            {foodCategories[category.label as keyof typeof foodCategories]}
           </div>
           <div className={styles.item__portion}>{size}g</div>
           <div className={styles.item__amountPeople}>

@@ -1,10 +1,10 @@
 @import "styles/variables";
 @import "styles/breakpoints";
 
-$massas: #d73b3b;
-$carnes: #30201e;
+$pastas: #d73b3b;
+$meat: #30201e;
 $combos: #e6c864;
-$veganos: #80aa40;
+$vegans: #80aa40;
 
 .item {
   display: flex;
@@ -71,19 +71,19 @@ $veganos: #80aa40;
     height: 40px;
     justify-content: center;
     padding: 10px 30px;
-    &__massas {
-      background-color: $massas;
+    &__pastas {
+      background-color: $pastas;
       color: white;
     }
-    &__carnes {
-      background-color: $carnes;
+    &__meat {
+      background-color: $meat;
       color: white;
     }
     &__combos {
       background-color: $combos;
     }
-    &__veganos {
-      background-color: $veganos;
+    &__vegans {
+      background-color: $vegans;
     }
   }
   &__portion,

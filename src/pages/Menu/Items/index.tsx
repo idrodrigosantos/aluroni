@@ -11,7 +11,7 @@ interface Props {
 
 export default function Items(props: Props) {
   const [list, setList] = useState(menu);
-  const { search, filter } = props;
+  const { search, filter, sort } = props;
 
   function testSearch(title: string) {
     // 'i' -> case insensitive
@@ -28,13 +28,26 @@ export default function Items(props: Props) {
     return true;
   }
 
+  function order(newList: typeof menu) {
+    switch (sort) {
+      case 'portion':
+        return newList.sort((a, b) => (a.size > b.size ? 1 : -1));
+      case 'amount_people':
+        return newList.sort((a, b) => (a.serving > b.serving ? 1 : -1));
+      case 'price':
+        return newList.sort((a, b) => (a.price > b.price ? 1 : -1));
+      default:
+        return newList;
+    }
+  }
+
   useEffect(() => {
     const newList = menu.filter(
       (item) => testSearch(item.title) && testFilter(item.category.id)
     );
 
-    setList(newList);
-  }, [search, filter]);
+    setList(order(newList));
+  }, [search, filter, sort]);
 
   return (
     <div className={styles.items}>

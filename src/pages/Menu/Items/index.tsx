@@ -28,14 +28,21 @@ export default function Items(props: Props) {
     return true;
   }
 
+  const sortCrescentProperty = (
+    list: typeof menu,
+    property: 'size' | 'serving' | 'price'
+  ) => {
+    return list.sort((a, b) => (a[property] > b[property] ? 1 : -1));
+  };
+
   function order(newList: typeof menu) {
     switch (sort) {
       case 'portion':
-        return newList.sort((a, b) => (a.size > b.size ? 1 : -1));
+        return sortCrescentProperty(newList, 'size');
       case 'amount_people':
-        return newList.sort((a, b) => (a.serving > b.serving ? 1 : -1));
+        return sortCrescentProperty(newList, 'serving');
       case 'price':
-        return newList.sort((a, b) => (a.price > b.price ? 1 : -1));
+        return sortCrescentProperty(newList, 'price');
       default:
         return newList;
     }
@@ -47,6 +54,7 @@ export default function Items(props: Props) {
     );
 
     setList(order(newList));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search, filter, sort]);
 
   return (

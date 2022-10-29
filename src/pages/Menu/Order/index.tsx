@@ -1,12 +1,14 @@
 import styles from './Order.module.scss';
 import options from './options.json';
-import React, { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import classNames from 'classnames';
 import { MdKeyboardArrowUp, MdOutlineKeyboardArrowDown } from 'react-icons/md';
 
+export type SortOptions = '' | 'portion' | 'amount_people' | 'price';
+
 interface Props {
   order: string;
-  setOrder: React.Dispatch<React.SetStateAction<string>>;
+  setOrder: Dispatch<SetStateAction<SortOptions>>;
 }
 
 export default function Order({ order, setOrder }: Props) {
@@ -23,7 +25,7 @@ export default function Order({ order, setOrder }: Props) {
       onClick={() => setOpen(!open)}
       onBlur={() => setOpen(false)}
     >
-      <span>{orderName || 'Ordenar Por'}</span>
+      <span>{orderName || 'Ordenar'}</span>
       {open ? (
         <MdKeyboardArrowUp size={20} />
       ) : (
@@ -39,7 +41,7 @@ export default function Order({ order, setOrder }: Props) {
           <div
             className={styles.order__option}
             key={option.value}
-            onClick={() => setOrder(option.value)}
+            onClick={() => setOrder(option.value as SortOptions)}
           >
             {option.name}
           </div>

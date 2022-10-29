@@ -3,13 +3,13 @@ import { ReactComponent as Logo } from 'assets/logo.svg';
 import SearchEngine from './SearchEngine';
 import { useState } from 'react';
 import Filters from './Filters';
-import Order from './Order';
+import Order, { SortOptions } from './Order';
 import Items from './Items';
 
 export default function Menu() {
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState<number | null>(null);
-  const [order, setOrder] = useState('');
+  const [order, setOrder] = useState<SortOptions>('');
 
   return (
     <main>
@@ -17,7 +17,7 @@ export default function Menu() {
         <Logo />
       </nav>
       <header className={styles.header}>
-        <div className={styles.header__text}>A casa do código e da massa</div>
+        <div className={styles.header__text}>A Casa da Massa</div>
       </header>
       <section className={styles.menu}>
         <h3 className={styles.menu__title}>Cardápio</h3>

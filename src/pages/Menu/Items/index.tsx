@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import menu from './items.json';
+import menu from 'data/menu.json';
 import Item from './Item';
 import styles from './Items.module.scss';
 
@@ -29,10 +29,12 @@ export default function Items(props: Props) {
   }
 
   const sortCrescentProperty = (
-    list: typeof menu,
+    listSortCrescent: typeof menu,
     property: 'size' | 'serving' | 'price'
   ) => {
-    return list.sort((a, b) => (a[property] > b[property] ? 1 : -1));
+    return listSortCrescent.sort((a, b) =>
+      a[property] > b[property] ? 1 : -1
+    );
   };
 
   function sortList(newList: typeof menu) {
@@ -54,7 +56,6 @@ export default function Items(props: Props) {
     );
 
     setList(sortList(newList));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search, filter, sort]);
 
   return (

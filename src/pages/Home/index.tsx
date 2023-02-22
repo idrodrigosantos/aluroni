@@ -1,7 +1,9 @@
 import menu from 'data/menu.json';
-import styles from './Start.module.scss';
+import styles from './Home.module.scss';
+import stylesTheme from 'styles/Theme.module.scss';
+import ourHome from 'assets/our-home.png';
 
-export default function Start() {
+export default function Home() {
   let recommendedDishes = [...menu];
   recommendedDishes = recommendedDishes
     .sort(() => 0.5 - Math.random())
@@ -9,7 +11,7 @@ export default function Start() {
 
   return (
     <section>
-      <h3 className={styles.title}>Recomendações da Cozinha</h3>
+      <h3 className={stylesTheme.title}>Recomendações da Cozinha</h3>
 
       <div className={styles.recommended}>
         {recommendedDishes.map((item) => (
@@ -21,6 +23,15 @@ export default function Start() {
             <button className={styles.recommend__button}>Ver mais</button>
           </div>
         ))}
+      </div>
+
+      <h3 className={stylesTheme.title}>Nossa Casa</h3>
+      <div className={styles.ourHome}>
+        <img src={ourHome} alt="Casa do Aluroni" />
+
+        <div className={styles.ourHome__address}>
+          Avenida Principal, 100 <br /> <br /> Centro - SP
+        </div>
       </div>
     </section>
   );

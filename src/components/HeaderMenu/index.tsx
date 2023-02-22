@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import styles from './HeaderMenu.module.scss';
+import stylesTheme from 'styles/Theme.module.scss';
 
 export default function HeaderMenu() {
   return (
@@ -8,7 +9,7 @@ export default function HeaderMenu() {
         <div className={styles.header__text}>A Casa da Massa</div>
       </header>
 
-      <div>
+      <div className={stylesTheme.container}>
         <Outlet />
       </div>
     </>

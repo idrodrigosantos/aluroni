@@ -1,8 +1,9 @@
-import HeaderMenu from 'components/HeaderMenu';
-import NavigationMenu from 'components/NavigationMenu';
-import Menu from 'pages/Menu';
-import Start from 'pages/Start';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavigationMenu from 'components/NavigationMenu';
+import HeaderMenu from 'components/HeaderMenu';
+import Home from 'pages/Home';
+import Menu from 'pages/Menu';
+import About from 'pages/About';
 
 export default function AppRouter() {
   return (
@@ -12,9 +13,11 @@ export default function AppRouter() {
 
         <Routes>
           <Route path="/" element={<HeaderMenu />}>
-            <Route index element={<Start />} />
+            <Route index element={<Home />} />
 
             <Route path="cardapio" element={<Menu />} />
+
+            <Route path="sobre" element={<About />} />
           </Route>
         </Routes>
       </Router>

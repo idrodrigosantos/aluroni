@@ -2,21 +2,6 @@
 @import "styles/breakpoints";
 
 .menu {
-  padding: 50px $horizontal-padding;
-  @media (max-width: $desktop_xsm) {
-    padding: 50px $horizontal-padding-mobile;
-  }
-  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
-    padding: 50px $horizontal-padding-sm;
-  }
-  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
-    padding: 50px $horizontal-padding-md;
-  }
-  &__title {
-    color: $dark;
-    font-size: 3rem;
-    margin-bottom: 30px;
-  }
   &__filters {
     align-items: center;
     display: flex;

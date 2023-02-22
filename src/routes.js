@@ -4,6 +4,7 @@ import HeaderMenu from 'components/HeaderMenu';
 import Home from 'pages/Home';
 import Menu from 'pages/Menu';
 import About from 'pages/About';
+import Footer from 'components/Footer';
 
 export default function AppRouter() {
   return (
@@ -20,6 +21,8 @@ export default function AppRouter() {
             <Route path="sobre" element={<About />} />
           </Route>
         </Routes>
+
+        <Footer />
       </Router>
     </main>
   );

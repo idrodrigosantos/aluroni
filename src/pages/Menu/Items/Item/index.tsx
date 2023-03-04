@@ -1,16 +1,9 @@
-import classNames from 'classnames';
+import DishTags from 'components/DishTags';
 import { Dish } from 'types/Dish';
 import styles from './Item.module.scss';
 
 export default function Item(props: Dish) {
-  const { title, description, category, size, serving, price, image } = props;
-
-  const foodCategories = {
-    pastas: 'Massas',
-    meat: 'Carnes',
-    combos: 'Combos',
-    vegans: 'Veganos',
-  };
+  const { title, description, image } = props;
 
   return (
     <div className={styles.item}>
@@ -22,23 +15,7 @@ export default function Item(props: Dish) {
           <h2>{title}</h2>
           <p>{description}</p>
         </div>
-        <div className={styles.item__tags}>
-          <div
-            className={classNames({
-              [styles.item__type]: true,
-              [styles[`item__type__${category.label.toLowerCase()}`]]: true,
-            })}
-          >
-            {foodCategories[category.label as keyof typeof foodCategories]}
-          </div>
-          <div className={styles.item__portion}>{size}g</div>
-          <div className={styles.item__amountPeople}>
-            Serve {serving} {serving === 1 ? 'pessoa' : 'pessoas'}
-          </div>
-          <div className={styles.item__price}>
-            R$ {price.toFixed(2).replace('.', ',')}
-          </div>
-        </div>
+        <DishTags {...props} />
       </div>
     </div>
   );

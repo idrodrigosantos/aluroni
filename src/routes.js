@@ -21,10 +21,10 @@ export default function AppRouter() {
             <Route path="cardapio" element={<Menu />} />
 
             <Route path="sobre" element={<About />} />
+
+            <Route path="prato/:id" element={<Dish />} />
           </Route>
           <Route path="*" element={<NotFound />} />
-
-          <Route path="prato/:id" element={<Dish />} />
         </Routes>
 
         <Footer />

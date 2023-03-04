@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import menu from 'data/menu.json';
 import Item from './Item';
 import styles from './Items.module.scss';
+import { Menu } from 'types/Dish';
 
 interface Props {
   search: string;
@@ -29,7 +30,7 @@ export default function Items(props: Props) {
   }
 
   const sortCrescentProperty = (
-    listSortCrescent: typeof menu,
+    listSortCrescent: Menu,
     property: 'size' | 'serving' | 'price'
   ) => {
     return listSortCrescent.sort((a, b) =>
@@ -37,7 +38,7 @@ export default function Items(props: Props) {
     );
   };
 
-  function sortList(newList: typeof menu) {
+  function sortList(newList: Menu) {
     switch (sort) {
       case 'portion':
         return sortCrescentProperty(newList, 'size');

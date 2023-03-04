@@ -1,10 +1,10 @@
+import { useNavigate } from 'react-router-dom';
+import classNames from 'classnames';
+import { ReactComponent as NotFoundImage } from 'assets/not-found.svg';
 import styles from './NotFound.module.scss';
 import stylesTheme from 'styles/Theme.module.scss';
-import { ReactComponent as NotFoundImage } from 'assets/not-found.svg';
-import classNames from 'classnames';
-import { useNavigate } from 'react-router-dom';
 
-export default function NotFound() {
+export function NotFound() {
   const navigate = useNavigate();
 
   return (

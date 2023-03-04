@@ -10,7 +10,7 @@ interface Props {
   setFilter: Dispatch<SetStateAction<number | null>>;
 }
 
-export default function Filters({ filter, setFilter }: Props) {
+export function Filters({ filter, setFilter }: Props) {
   function selectFilter(option: OptionType) {
     if (filter === option.id) {
       return setFilter(null);

@@ -1,12 +1,12 @@
-import styles from './About.module.scss';
-import stylesTheme from 'styles/Theme.module.scss';
 import house from 'assets/about/house.png';
 import pasta01 from 'assets/about/pasta01.png';
 import pasta02 from 'assets/about/pasta02.png';
+import styles from './About.module.scss';
+import stylesTheme from 'styles/Theme.module.scss';
 
 const images = [pasta01, pasta02];
 
-export default function About() {
+export function About() {
   return (
     <section>
       <h3 className={stylesTheme.title}>Sobre</h3>

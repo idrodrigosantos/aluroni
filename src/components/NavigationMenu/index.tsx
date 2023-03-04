@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from 'assets/logo.svg';
 import styles from './NavigationMenu.module.scss';
 
-export default function NavigationMenu() {
+export function NavigationMenu() {
   const routes = [
     {
       label: 'Início',

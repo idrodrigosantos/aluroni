@@ -11,7 +11,7 @@ interface Props {
   setSort: Dispatch<SetStateAction<SortOptions>>;
 }
 
-export default function Sort({ sort, setSort }: Props) {
+export function Sort({ sort, setSort }: Props) {
   const [open, setOpen] = useState(false);
   const sortName =
     sort && options.find((option) => option.value === sort)?.name;

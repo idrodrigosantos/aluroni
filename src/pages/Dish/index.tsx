@@ -1,11 +1,11 @@
 import { Route, Routes, useNavigate, useParams } from 'react-router-dom';
 import menu from 'data/menu.json';
-import DishTags from 'components/DishTags';
-import NotFound from 'pages/NotFound';
+import { DefaultPage } from 'components/DefaultPage';
+import { DishTags } from 'components/DishTags';
+import { NotFound } from 'pages/NotFound';
 import styles from './Dish.module.scss';
-import DefaultPage from 'components/DefaultPage';
 
-export default function Dish() {
+export function Dish() {
   const { id } = useParams();
   const navigate = useNavigate();
   const dish = menu.find((item) => item.id === Number(id));

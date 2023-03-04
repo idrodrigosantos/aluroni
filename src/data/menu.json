@@ -2,7 +2,7 @@
   {
     "title": "Macarrão mediterrâneo",
     "description": "Macarrão spaghetti com frutos-do-mar e especiarias, especialidade da cozinha. Atenção: Contém camarão e outros frutos-do-mar!",
-    "image": "/assets/dishes/macarrao-mediterraneo.png",
+    "image": "/assets/dishes/mediterranean-pasta.png",
     "size": 400,
     "serving": 2,
     "price": 73,
@@ -15,7 +15,7 @@
   {
     "title": "Macarrão da casa",
     "description": "Macarrão com frutos-do-mar e especiarias, especialidade da cozinha. Atenção: Contém camarão e outros frutos-do-mar!",
-    "image": "/assets/dishes/macarrao-da-casa.png",
+    "image": "/assets/dishes/house-noodles.png",
     "size": 400,
     "serving": 2,
     "price": 54,
@@ -28,7 +28,7 @@
   {
     "title": "Macarrão com chilli",
     "description": "Macarrão fettuccine com molho de chilli e especiárias.",
-    "image": "/assets/dishes/macarrao-com-chilli.png",
+    "image": "/assets/dishes/chili-noodles.png",
     "size": 350,
     "serving": 1,
     "price": 58,
@@ -41,7 +41,7 @@
   {
     "title": "Salada da casa com salmão grelhado",
     "description": "Salada da casa (alface, rúcula, cenoura) com salmão.",
-    "image": "/assets/dishes/salada-da-casa.png",
+    "image": "/assets/dishes/house-salad.png",
     "size": 450,
     "serving": 1,
     "price": 42,
@@ -54,7 +54,7 @@
   {
     "title": "Bife com batatas",
     "description": "Bife de boi (150g) na chapa, com batatas fritas. Acompanha arroz e molhos.",
-    "image": "/assets/dishes/bife-com-batatas.png",
+    "image": "/assets/dishes/steak-with-potatoes.png",
     "size": 550,
     "serving": 2,
     "price": 86,
@@ -67,7 +67,7 @@
   {
     "title": "Picanha picada com legumes e massa",
     "description": "400g de picanha picada, com legumes grelhados e massa escolhida pelo cliente.",
-    "image": "/assets/dishes/picanha-picada.png",
+    "image": "/assets/dishes/rump-steak.png",
     "size": 850,
     "serving": 3,
     "price": 123,
@@ -80,7 +80,7 @@
   {
     "title": "Lasagna vegana (carne de soja)",
     "description": "Lasagna 100% vegana feita com carne de soja e massa especial.",
-    "image": "/assets/dishes/lasagna-vegana.png",
+    "image": "/assets/dishes/vegan-lasagna.png",
     "size": 350,
     "serving": 1,
     "price": 45,
@@ -93,7 +93,7 @@
   {
     "title": "Salada especial",
     "description": "Salada com abacate, manga, alface, grão de bico e muito mais.",
-    "image": "/assets/dishes/salada-especial.png",
+    "image": "/assets/dishes/special-salad.png",
     "size": 350,
     "serving": 1,
     "price": 37,
@@ -106,7 +106,7 @@
   {
     "title": "Almôndegas",
     "description": "Porção de almôndegas com sour cream, cebola e temperos. Acompanha arroz ou massa.",
-    "image": "/assets/dishes/almondegas.png",
+    "image": "/assets/dishes/meatballs.png",
     "size": 740,
     "serving": 3,
     "price": 120,

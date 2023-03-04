@@ -7,7 +7,7 @@ interface Props {
   setSearch: Dispatch<SetStateAction<string>>;
 }
 
-export default function SearchEngine({ search, setSearch }: Props) {
+export function SearchEngine({ search, setSearch }: Props) {
   return (
     <>
       <div className={styles.searchEngine}>

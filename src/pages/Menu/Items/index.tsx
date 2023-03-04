@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import menu from 'data/menu.json';
-import Item from './Item';
-import styles from './Items.module.scss';
+import { Item } from './Item';
 import { Menu } from 'types/Dish';
+import styles from './Items.module.scss';
 
 interface Props {
   search: string;
@@ -10,7 +10,7 @@ interface Props {
   sort: string;
 }
 
-export default function Items(props: Props) {
+export function Items(props: Props) {
   const [list, setList] = useState(menu);
   const { search, filter, sort } = props;
 

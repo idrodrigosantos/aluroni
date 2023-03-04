@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import { Dish } from 'types/Dish';
-import DishTags from 'components/DishTags';
+import { DishTags } from 'components/DishTags';
 import styles from './Item.module.scss';
 
-export default function Item(props: Dish) {
+export function Item(props: Dish) {
   const { id, title, description, image } = props;
   const navigate = useNavigate();
 

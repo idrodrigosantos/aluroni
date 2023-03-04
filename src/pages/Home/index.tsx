@@ -1,11 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import menu from 'data/menu.json';
+import ourHome from 'assets/our-home.png';
+import { Dish } from 'types/Dish';
 import styles from './Home.module.scss';
 import stylesTheme from 'styles/Theme.module.scss';
-import ourHome from 'assets/our-home.png';
-import { useNavigate } from 'react-router-dom';
-import { Dish } from 'types/Dish';
 
-export default function Home() {
+export function Home() {
   let recommendedDishes = [...menu];
   recommendedDishes = recommendedDishes
     .sort(() => 0.5 - Math.random())

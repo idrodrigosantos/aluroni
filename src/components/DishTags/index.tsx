@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { Dish } from 'types/Dish';
 import styles from './DishTags.module.scss';
 
-export default function DishTags({ category, size, serving, price }: Dish) {
+export function DishTags({ category, size, serving, price }: Dish) {
   const foodCategories = {
     pastas: 'Massas',
     meats: 'Carnes',

@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavigationMenu from 'components/NavigationMenu';
-import DefaultPage from 'components/DefaultPage';
-import Home from 'pages/Home';
-import Menu from 'pages/Menu';
-import About from 'pages/About';
-import NotFound from 'pages/NotFound';
-import Dish from 'pages/Dish';
-import Footer from 'components/Footer';
+import { DefaultPage } from 'components/DefaultPage';
+import { Footer } from 'components/Footer';
+import { NavigationMenu } from 'components/NavigationMenu';
+import { About } from 'pages/About';
+import { Dish } from 'pages/Dish';
+import { Home } from 'pages/Home';
+import { Menu } from 'pages/Menu';
+import { NotFound } from 'pages/NotFound';
 
-export default function AppRouter() {
+export function AppRouter() {
   return (
     <main className="container">
       <Router>

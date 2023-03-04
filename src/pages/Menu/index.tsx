@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import SearchEngine from './SearchEngine';
-import Filters from './Filters';
-import Sort, { SortOptions } from './Sort';
-import Items from './Items';
+import { Filters } from './Filters';
+import { Items } from './Items';
+import { SearchEngine } from './SearchEngine';
+import { Sort, SortOptions } from './Sort';
 import styles from './Menu.module.scss';
 import stylesTheme from 'styles/Theme.module.scss';
 
-export default function Menu() {
+export function Menu() {
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState<number | null>(null);
   const [sort, setSort] = useState<SortOptions>('');
